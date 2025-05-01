@@ -1,0 +1,11 @@
+# Repeat for each forwarded zone.
+zone "<my.zone.com>" IN {
+    type slave;
+    # Verify cache location for your distro.
+    file "/var/cache/bind/<my.zone>db";
+    # IP's of your AD DNS server(s).
+    masters {
+        <IP>;
+    };
+};
+

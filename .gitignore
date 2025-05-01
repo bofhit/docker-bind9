@@ -8,3 +8,7 @@
 *.pckl
 *.venv*
 *__pycache__*
+
+# Config files
+named.conf.local
+

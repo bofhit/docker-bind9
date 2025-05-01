@@ -7,9 +7,9 @@ RUN apt update && \
             bind9-doc \
             dnsutils -y
 
-RUN mkdir /etc/app
-COPY startup.sh /etc/app
-RUN chmod +x /etc/app/startup.sh
+RUN mkdir /scripts
+COPY startup.sh /scripts
+RUN chmod +x /scripts/startup.sh
 
-ENTRYPOINT ["/bin/bash", "-c", "/etc/app/startup.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "/scripts/startup.sh"]
 

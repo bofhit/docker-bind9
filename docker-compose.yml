@@ -3,4 +3,6 @@ services:
         image: bind9:$VERSION
         ports: 
           - 53:53
+        volumes:
+          - ./named.conf.local:/etc/bind/named.conf.local
 

@@ -1,0 +1,8 @@
+zone "int.blessingsofhope.com" IN {
+    type slave;
+    file "/var/cache/bind/int.blessingsofhope.com.db";
+    masters {
+        192.168.40.20;
+    };
+};
+

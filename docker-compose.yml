@@ -1,0 +1,6 @@
+services:
+    bind9:
+        image: bind9:$VERSION
+        ports: 
+          - 53:53
+

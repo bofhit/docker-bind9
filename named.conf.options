@@ -1,7 +1,12 @@
 options {
-    recursion yes;
-    allow-recursion {
-        192.168.40.0/24;
+    directory "/var/cache/bind";
+    forwarders {
+        1.1.1.1;
+        9.9.9.9;
     };
+    recursion yes;
+    allow-recursion { 192.168.0.0/16; };
+    allow-query { any; };
+    allow-query-cache { any; };
+    masterfile-format text;
 };
-

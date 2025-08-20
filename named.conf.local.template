@@ -9,3 +9,14 @@ zone "<my.zone.com>" IN {
     };
 };
 
+logging {
+    channel default_log {
+    file "/var/log/named/default" versions 3 size 20m;
+    print-time yes;
+    print-category yes;
+    print-severity yes;
+    severity debug;
+    };
+
+};
+

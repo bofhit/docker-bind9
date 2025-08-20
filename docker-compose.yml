@@ -3,6 +3,7 @@ services:
     image: bind9:$VERSION
     hostname: bind9
     container_name: bind9
+    restart: always
     ports: 
       - "53:53/udp"
       - "53:53/tcp"
